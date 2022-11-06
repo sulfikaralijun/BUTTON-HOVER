@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            align-items: center;
+            background: #000;
+        }
+        .a6 {
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.a6 .aa {
+    margin-right: 50px;
+    position: relative;
+    width: 240px;
+    height: 75px;
+    line-height: 73px;
+    background: #000;
+    text-transform: uppercase;
+    font-size: 20px;
+    letter-spacing: 4px;
+    text-decoration: none;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0004);
+}
+.a6 .aa::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        45deg,
+        #fb0094,
+        #00f,
+        #0f0,
+        #ff0,
+        #f00,
+        #fb0094,
+        #00f,
+        #0f0,
+        #ff0,
+        #f00
+    );
+    background-size: 400%;
+    opacity: 0;
+    transition: 0.5s;
+    animation: animate 20s linear infinite;
+}
+.a6 .aa::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        45deg,
+        #fb0094,
+        #00f,
+        #0f0,
+        #ff0,
+        #f00,
+        #fb0094,
+        #00f,
+        #0f0,
+        #ff0,
+        #f00
+    );
+    background-size: 400%;
+    opacity: 0;
+    transition: 0.5s;
+    filter: blur(20px);
+    animation: animate 20s linear infinite;
+}
+.a6 .aa:hover::before,
+.a6 .aa:hover::after {
+    opacity: 1;
+}
+@keyframes animate {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 300% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+.a6 .aa:hover::before {
+    opacity: 1;
+}
+
+.a6 .aa span {
+    position: absolute;
+    display: block;
+    top: 1xp;
+    left: 1px;
+    right: 1px;
+    bottom: 1px;
+    text-align: center;
+    background: #0c0c0c;
+    color: rgba(225, 225, 225, 0.2);
+    transition: 0.5s;
+    z-index: 1;
+}
+.a6 .aa:hover span {
+    color: rgba(225, 225, 225, 1);
+}
+.a6 .aa span::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: rgba(225, 225, 225, 0.1);
+}
+    </style>
+</head>
+<body>
+    <div class="a6">
+            <a class="aa" href=""><span>button</span></a>
+    </div>
+</body>
+</html>
